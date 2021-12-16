@@ -381,7 +381,11 @@ header {
 
 .page-id-2 {
 	#main {
-		padding-bottom: 0px;
+		padding: 0px 0px 0px 0px;
+		
+		.default_editor {
+			padding-top: 100px;
+		}
 	}
 }
 
@@ -540,11 +544,12 @@ header {
 }
 
 #home_blocks_wrapper {
-	padding: 0px 0px 100px 0px;
+	background: $colorone;
+	padding: 100px 0px 100px 0px;
 	
 	.home_blocks {
 		.block {
-			background: $colorone;
+			background: #FFFFFF;
 			border-radius: 20px;
 			display: inline-block;
 			margin: 10px;
@@ -553,15 +558,15 @@ header {
 			width: calc(100% - 60px);
 			
 			h3 {
-				color: $lightfont;
+				color: $colorone;
 				font-size: 24px;
-				font-weight: 500;
+				font-weight: 700;
 				line-height: 32px;
 				margin: 10px 0px 20px 0px;
 			}
 			
 			p {
-				color: $lightfont;
+				color: $darkfont;
 				font-size: 18px;
 				line-height: 32px;
 				margin-bottom: 20px;
@@ -569,7 +574,7 @@ header {
 			
 			ul {
 				li {
-					color: $lightfont;
+					color: $colorone;
 					font-size: 18px;
 					line-height: 32px;
 					list-style-type: disc;
@@ -577,10 +582,28 @@ header {
 				}
 			}
 			
-			.icon {
-				background: #ffffff;
+			a:link,
+			a:visited {
+				background: $colorone;
+				border: 2px solid $colorone;
 				border-radius: 20px;
+				color: $lightfont;
+				display: block;
+				font-weight: 500;
+				padding: 10px 20px;
+				text-decoration: none;
+			}
+			
+			a:hover,
+			a:active {
+				background: transparent;
 				color: $colorone;
+			}
+			
+			.icon {
+				background: $colorone;
+				border-radius: 20px;
+				color: $lightfont;
 				display: block;
 				float: left;
 				font-size: 52px;
@@ -597,13 +620,13 @@ header {
 		.block:nth-child(2),
 		.block:nth-child(3) {
 			width: calc(33.333333332% - 60px);
-			min-height: 630px;
+
 		}
 		
 		.block:nth-child(4),
 		.block:nth-child(5) {
 			width: calc(50% - 60px);
-			min-height: 840px;
+
 		}
 	}
 }
@@ -683,9 +706,19 @@ header {
 			width: 20px;
 		}
 		
+		span.headachepain {
+			left: 165px;
+			top: 20px;
+		}
+		
 		span.neckpain {
 			left: 165px;
 			top: 110px;
+		}
+		
+		span.backpain {
+			left: 165px;
+			top: 200px;
 		}
 		
 		span.shoulderpain {
@@ -743,11 +776,32 @@ header {
 				margin-bottom: 20px;
 			}
 			
+			h4 {
+				color: $darkfont;
+				font-size: 18px;
+				font-weight: 500;
+				line-height: 24px;
+				margin-bottom: 20px;
+			}
+			
 			p {
 				color: $darkfont;
 				font-size: 18px;
-				line-height: 32px;
+				line-height: 24px;
 				margin-bottom: 20px;
+			}
+			
+			ul {
+				margin-bottom: 20px;
+				
+				li {
+					color: $darkfont;
+					font-size: 18px;
+					line-height: 24px;
+					list-style: disc;
+					margin-bottom: 10px;
+					margin-left: 20px;
+				}
 			}
 			
 			a:link,
@@ -776,6 +830,69 @@ header {
 	}
 }
 
+/* form wrapper / contact page */
+
+.form_wrapper {
+	background: $colorone;
+	margin-bottom: 100px;
+	padding: 100px 0px;
+	
+	.form {
+		form {
+			.gform_body {
+				.gfield {
+					input[type="text"],
+					input[type="email"],
+					input[type="tel"] {
+						border: none;
+						border-radius: 5px;
+						font-size: 24px;
+						padding: 10px;
+						appearance: none;
+					}
+					
+					textarea {
+						border: none;
+						border-radius: 5px;
+						font-size: 24px;
+						padding: 10px;
+						appearance: none;
+					}
+					
+					legend,
+					label {
+						color: $lightfont;
+						
+						span.gfield_required {
+							color: $lightfont;
+						}
+					}
+				}
+			}
+			
+			.gform_footer {
+				input[type="submit"] {
+					background: #ffffff;
+					border: 2px solid #ffffff;
+					border-radius: 10px;
+					color: $colorone;
+					cursor: pointer;
+					display: block;
+					font-size: 18px;
+					font-weight: 700;
+					padding: 10px 20px;
+					text-decoration: none;
+					transition: all .15s ease;
+				}
+				
+				input[type="submit"]:hover {
+					background: $colorone;
+					color: $lightfont;
+				}
+			}
+		}
+	}
+}
 
 /* gradient span */
 
@@ -798,13 +915,17 @@ span.grad-bar {
 	}
 }
 
+#accordion>h3,
 #accordion>h3:hover, 
 #accordion>h3.ui-state-active {
 	color: $colorone;
+	font-weight: 700;
+	letter-spacing: 0px;
+	text-transform: none;
 }
 
 #accordion>h3 {
-	border-top: 1px solid #FFFFFF;
+	border-top: 1px solid $colorone;
 	text-align: center;
 }
 
@@ -813,6 +934,10 @@ span.grad-bar {
 	background-size: 100%;
 	background-attachment: fixed;
 	background-position: center center;
+	
+	&.parallax_tall {
+		height: 450px;
+	}
 		
 	.filter {
 		background: rgba($colorone, .25);

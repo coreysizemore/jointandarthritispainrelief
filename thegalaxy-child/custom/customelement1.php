@@ -1,44 +1,5 @@
 <?php
 	
-	if( have_rows('home_blocks') ):
-	
-	echo '<div id="home_blocks_wrapper"><div class="container"><div class="row gutters"><div class="col_12"><div class="home_blocks">';
-	
-		while ( have_rows('home_blocks') ) : the_row();
-		
-			$heading = get_sub_field('heading');
-			$description = get_sub_field('description');
-			$icon = get_sub_field('icon');
-			
-			echo '<div class="block">';
-			
-			if (!empty($icon)):
-			
-				echo '<span class="icon">' . $icon . '</span>';
-			
-			endif;
-			
-			if (!empty($heading)):
-			
-				echo '<h3>' . $heading . '</h3>';
-			
-			endif;
-			
-			if (!empty($description)):
-			
-				echo '<p>' . $description . '</p>';
-			
-			endif;
-			
-			echo '</div>';
-		
-		endwhile;
-		
-	echo '</div></div></div></div></div>';
-	
-	endif;
-	
-	
 	if( have_rows('skeleton_items') ):
 	
 		// Desktop Version
@@ -146,6 +107,44 @@
 		endwhile;
 		
 		echo '</div></div></div></div></div>';
+	
+	endif;
+	
+	if( have_rows('home_blocks') ):
+	
+	echo '<div id="home_blocks_wrapper"><div class="container"><div class="row gutters"><div class="col_12"><div class="home_blocks">';
+	
+		while ( have_rows('home_blocks') ) : the_row();
+		
+			$heading = get_sub_field('heading');
+			$description = get_sub_field('description');
+			$icon = get_sub_field('icon');
+			
+			echo '<div class="block">';
+			
+			if (!empty($icon)):
+			
+				echo '<span class="icon">' . $icon . '</span>';
+			
+			endif;
+			
+			if (!empty($heading)):
+			
+				echo '<h3>' . $heading . '</h3>';
+			
+			endif;
+			
+			if (!empty($description)):
+			
+				echo '<p>' . $description . '</p>';
+			
+			endif;
+			
+			echo '</div>';
+		
+		endwhile;
+		
+	echo '</div></div></div></div></div>';
 	
 	endif;
 		

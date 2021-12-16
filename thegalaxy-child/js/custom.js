@@ -2,11 +2,11 @@ $(document).ready(function() {
 	
 	if ($('#skeleton_wrapper').length > 0) {
 	
-		$('.link_items').find('li.neckpain span').addClass('active');
+		$('.link_items').find('li.headachepain span').addClass('active');
 		
-		$('.skeleton').find('span.neckpain').addClass('active');
+		$('.skeleton').find('span.headachepain').addClass('active');
 		
-		$('.skeleton_description').find('span.neckpain').addClass('active');
+		$('.skeleton_description').find('span.headachepain').addClass('active');
 		
 		$('.link_items').find('li').hover(function() {
 			
