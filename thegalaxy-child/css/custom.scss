@@ -134,7 +134,7 @@ header {
 	}
 	
 	&#header_page {
-		background: url('../img/joint-header.jpg') no-repeat;
+		background: url('../img/page.jpg') no-repeat;
 		background-size: 100%;
 		background-attachment: fixed;
 		background-position: center center;
@@ -266,6 +266,7 @@ header {
 						a:link,
 						a:visited {
 							background: $colorone;
+							border-radius: 10px;
 							color: $lightfont;
 							font-size: 18px;
 							letter-spacing: 0px;
@@ -340,6 +341,11 @@ header {
 				a:visited {
 					background: $colorone;
 					color: $lightfont;
+					border-radius: 10px;
+					letter-spacing: 0px;
+					font-size: 18px;
+					font-weight: 500;
+					text-transform: none;
 				}
 			}
 		}
@@ -376,6 +382,37 @@ header {
 				color: $colorone;
 			}
 		}
+	}
+}
+
+.custom_callout {
+	padding: 100px 0px;
+	
+	h3 {
+		color: $colorone;
+		font-size: 32px;
+		font-weight: 700;
+		line-height: 42px;
+	}
+	
+	a:link,
+	a:visited {
+		background: $colorone;
+		border: 2px solid $colorone;
+		border-radius: 10px;
+		color: $lightfont;
+		display: block;
+		font-weight: 500;
+		font-size: 18px;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+	}
+	
+	a:hover,
+	a:active {
+		background: transparent;
+		color: $colorone;
 	}
 }
 
@@ -515,6 +552,12 @@ header {
 				color: $lightfont;
 			}
 			
+			strong {
+				display: block;
+				font-weight: 700;
+				margin-top: 10px;
+			}
+			
 			ul.business_hours {
 				li {
 					span {
@@ -524,6 +567,8 @@ header {
 			}
 			
 			.contact_info {
+				margin-top: 10px;
+				
 				ul {
 					li {
 						color: $lightfont;
@@ -548,6 +593,25 @@ header {
 	padding: 100px 0px 100px 0px;
 	
 	.home_blocks {
+		h1 {
+			color: $lightfont;
+			font-size: 42px;
+			font-weight: 400;
+			margin-bottom: 50px;
+			text-align: center;
+			
+			strong {
+				font-weight: 700;
+			}
+		}
+		
+		p {
+			color: $lightfont;
+			font-size: 18px;
+			line-height: 32px;
+			margin-bottom: 20px;
+		}
+			
 		.block {
 			background: #FFFFFF;
 			border-radius: 20px;
@@ -586,7 +650,7 @@ header {
 			a:visited {
 				background: $colorone;
 				border: 2px solid $colorone;
-				border-radius: 20px;
+				border-radius: 10px;
 				color: $lightfont;
 				display: block;
 				font-weight: 500;
@@ -616,16 +680,8 @@ header {
 			}
 		}
 		
-		.block:nth-child(1),
-		.block:nth-child(2),
-		.block:nth-child(3) {
+		.block {
 			width: calc(33.333333332% - 60px);
-
-		}
-		
-		.block:nth-child(4),
-		.block:nth-child(5) {
-			width: calc(50% - 60px);
 
 		}
 	}
@@ -691,7 +747,7 @@ header {
 	}
 	
 	.skeleton {
-		background: url('../img/skeleton.png') no-repeat;
+		background: url('../img/skeleton-vector.png') no-repeat;
 		background-size: 100%;
 		background-position: top center;
 		position: relative;
@@ -707,33 +763,33 @@ header {
 		}
 		
 		span.headachepain {
-			left: 165px;
-			top: 20px;
+			left: 164px;
+			top: 10px;
 		}
 		
 		span.neckpain {
-			left: 165px;
+			left: 164px;
 			top: 110px;
 		}
 		
 		span.backpain {
-			left: 165px;
+			left: 164px;
 			top: 200px;
 		}
 		
 		span.shoulderpain {
-			left: 103px;
-			top: 140px;
+			left: 96px;
+			top: 137px;
 		}
 		
 		span.elbowpain {
-			left: 270px;
+			left: 274px;
 			top: 259px;
 		}
 		
 		span.handwristpain {
-			left: 291px;
-			top: 371px;
+			left: 296px;
+			top: 381px;
 		}
 		
 		span.hippain {
@@ -743,12 +799,12 @@ header {
 		
 		span.kneepain {
 			left: 203px;
-			top: 531px;
+			top: 545px;
 		}
 		
 		span.anklefootpain {
-			left: 136px;
-			top: 711px;
+			left: 132px;
+			top: 722px;
 		}
 		
 		span.glow {
@@ -786,7 +842,7 @@ header {
 			
 			p {
 				color: $darkfont;
-				font-size: 18px;
+				font-size: 16px;
 				line-height: 24px;
 				margin-bottom: 20px;
 			}
@@ -796,7 +852,7 @@ header {
 				
 				li {
 					color: $darkfont;
-					font-size: 18px;
+					font-size: 16px;
 					line-height: 24px;
 					list-style: disc;
 					margin-bottom: 10px;
@@ -846,7 +902,15 @@ header {
 					input[type="tel"] {
 						border: none;
 						border-radius: 5px;
-						font-size: 24px;
+						font-size: 20px;
+						padding: 10px;
+						appearance: none;
+					}
+					
+					select {
+						border: none;
+						border-radius: 5px;
+						font-size: 20px;
 						padding: 10px;
 						appearance: none;
 					}
@@ -866,6 +930,12 @@ header {
 						span.gfield_required {
 							color: $lightfont;
 						}
+					}
+					
+					.gfield_description {
+						color: $lightfont;
+						font-size: 14px;
+						line-height: 20px;
 					}
 				}
 			}
@@ -1036,7 +1106,8 @@ footer {
 	
 	#logo_footer {
 		img {
-			height: 200px;
+			height: auto;
+			width: 100%;
 		}
 		
 		h2 {
@@ -1044,13 +1115,36 @@ footer {
 		}
 	}
 	
+	img {
+		height: auto;
+		width: 100%;
+	}
+	
 	h3 {
-		color: $colorone;
+		color: $lightfont;
+		font-size: 22px;
+		letter-spacing: 0px;
+		text-transform: capitalize;
 	}
 	
 	p {
 		color: $lightfont;
 		margin-bottom: 10px;
+		
+		strong {
+			font-weight: 700;
+		}
+		
+		a:link,
+		a:visited {
+			color: $lightfont;
+			text-decoration: none;
+		}
+		
+		a:hover,
+		a:active {
+			opacity: .5;
+		}
 	}
 	
 	ul {
@@ -1070,6 +1164,8 @@ footer {
 			}
 		}
 	}
+	
+	
 	
 	.tagcloud {
 		a:link,
@@ -1160,9 +1256,17 @@ footer {
 		}
 		
 		&#header_page_mobile {
-			background: url('../img/joint-header.jpg') no-repeat;
+			background: url('../img/page.jpg') no-repeat;
 			background-size: 100%;
 			background-position: center center;	
+		}
+	}
+	
+	#home_blocks_wrapper {
+		.home_blocks {
+			.block {
+				width: calc(50% - 60px);
+			}
 		}
 	}
 	
@@ -1218,7 +1322,7 @@ footer {
 		}
 		
 		&#header_page_mobile {
-			background: url('../img/joint-header-mobile.jpg') no-repeat;
+			background: url('../img/page_mobile.jpg') no-repeat;
 			background-size: 100%;
 			background-position: right top;	
 		}
@@ -1230,6 +1334,14 @@ footer {
 				.service_block {
 					width: calc(50% - 60px);
 				}
+			}
+		}
+	}
+	
+	#home_blocks_wrapper {
+		.home_blocks {
+			.block {
+				width: calc(50% - 60px);
 			}
 		}
 	}
@@ -1283,7 +1395,7 @@ footer {
 		}
 		
 		&#header_page_mobile {
-			background: url('../img/joint-header-mobile.jpg') no-repeat;
+			background: url('../img/page_mobile.jpg') no-repeat;
 			background-size: 100%;
 			background-position: center center;	
 		}
@@ -1302,6 +1414,21 @@ footer {
 				.service_block {
 					width: calc(50% - 60px);
 				}
+			}
+		}
+	}
+	
+	.custom_callout {
+		h3 {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+	}
+	
+	#home_blocks_wrapper {
+		.home_blocks {
+			.block {
+				width: calc(100% - 60px);
 			}
 		}
 	}
@@ -1356,7 +1483,7 @@ footer {
 		}
 		
 		&#header_page_mobile {
-			background: url('../img/joint-header-mobile.jpg') no-repeat;
+			background: url('../img/page_mobile.jpg') no-repeat;
 			background-size: 100%;
 			background-position: center center;	
 		}
@@ -1375,6 +1502,21 @@ footer {
 				.service_block {
 					width: calc(100% - 60px);
 				}
+			}
+		}
+	}
+	
+	.custom_callout {
+		h3 {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+	}
+	
+	#home_blocks_wrapper {
+		.home_blocks {
+			.block {
+				width: calc(100% - 60px);
 			}
 		}
 	}

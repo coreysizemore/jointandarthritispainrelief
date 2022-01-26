@@ -114,6 +114,10 @@
 	
 	echo '<div id="home_blocks_wrapper"><div class="container"><div class="row gutters"><div class="col_12"><div class="home_blocks">';
 	
+		echo '<h1><strong>Our</strong> Philosophy</h1>';
+		
+		echo '<p>Joint and Arthritis Pain Relief is a team of medical professionals who specialize in treating acute and chronic injuries of the spine, neck, shoulder, knee, hip, and extremity. Our mission is to provide expert healthcare through a patient focused clinical integration and the support of highly effective professionals. We believe there are three parts to providing expert care to our patients.</p>';
+	
 		while ( have_rows('home_blocks') ) : the_row();
 		
 			$heading = get_sub_field('heading');
