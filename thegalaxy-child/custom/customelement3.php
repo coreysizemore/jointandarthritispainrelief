@@ -8,7 +8,7 @@
 				
 				<div class="content">
 					
-					<p>For more information about our services, or if you are ready to schedule an appointment, you can use the form below. Someone will respond to your information request as quickly as possible. You can also contact our office directly at <a href="tel:13606678870" target="_blank">360-667-8870</a> to schedule an appointment.</p>
+					<p>For more information about our services, or if you are ready to schedule an appointment, you can use the form below. Someone will respond to your information request as quickly as possible. You can also contact our office directly at <a href="tel:13603383029" target="_blank">360-338-3029</a> to schedule an appointment.</p>
 					
 				</div>
 				
